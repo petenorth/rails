@@ -14,11 +14,12 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
-    - run: pwd  
-    - name: Build and test with Rake
+    - name: install OS packages
       run: |
         sudo apt-get update
         sudo apt-get install libncurses5-dev libncursesw5-dev libxml2-dev libxslt-dev sqlite3 libsqlite3-dev mysql-server postgresql postgresql-contrib
+    - name: install gems
+      run: |
         bundle install
     - name: test actionpack journey
       run: |
