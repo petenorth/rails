@@ -22,6 +22,13 @@ GIT
   specs:
     queue_classic (3.2.0.RC1)
       pg (>= 0.17, < 2.0)
+GIT
+  remote: https://github.com/eventmachine/eventmachine.git
+  revision: 10fb0c47c9a030b716dacd4a8df7e34b2445169b
+  branch: master
+  specs:
+    eventmachine (1.2.7)
+
 
 PATH
   remote: .
