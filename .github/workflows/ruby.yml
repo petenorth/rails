@@ -14,6 +14,7 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
+    - run: pwd  
     - name: Build and test with Rake
       run: |
         sudo apt-get update
@@ -21,10 +22,10 @@ jobs:
         bundle install
     - name: run route_test.rb
       run: |
-        bundle exec rake test TEST=rails/actionpack/test/journey/route_test.rb
+        bundle exec rake test TEST=../actionpack/test/journey/route_test.rb
     - name: run routes_test.rb
       run: |
-        bundle exec rake test TEST=rails/actionpack/test/journey/routes_test.rb
+        bundle exec rake test TEST=../actionpack/test/journey/routes_test.rb
     - name: run router_test.rb
       run: |
-        bundle exec rake test TEST=rails/actionpack/test/journey/router_test.rb
+        bundle exec rake test TEST=../actionpack/test/journey/router_test.rb
