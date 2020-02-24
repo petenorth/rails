@@ -19,4 +19,12 @@ jobs:
         sudo apt-get update
         sudo apt-get install libncurses5-dev libncursesw5-dev libxml2-dev libxslt-dev sqlite3 libsqlite3-dev mysql-server postgresql postgresql-contrib
         bundle install
-        bundle exec rake test rails/actionpack/test/journey
+    - name: run route_test.rb
+      run: |
+        bundle exec rake test TEST=rails/actionpack/test/journey/route_test.rb
+    - name: run routes_test.rb
+      run: |
+        bundle exec rake test TEST=rails/actionpack/test/journey/routes_test.rb
+    - name: run router_test.rb
+      run: |
+        bundle exec rake test TEST=rails/actionpack/test/journey/router_test.rb
