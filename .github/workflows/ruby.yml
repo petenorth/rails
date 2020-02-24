@@ -17,6 +17,6 @@ jobs:
     - name: Build and test with Rake
       run: |
         sudo apt-get update
-        sudo apt-get install libncurses5-dev libncursesw5-dev libxml2-dev libxslt-dev sqlite3 mysql-server postgresql postgresql-contrib
+        sudo apt-get install libncurses5-dev libncursesw5-dev libxml2-dev libxslt-dev sqlite3 libsqlite3-dev mysql-server postgresql postgresql-contrib
         bundle install
         bundle exec rake test rails/actionpack/test/journey
