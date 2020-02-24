@@ -60,6 +60,8 @@ gem "connection_pool", require: false
 # for railties app_generator_test
 gem "bootsnap", ">= 1.1.0", require: false
 
+gem "eventmachine", github: "eventmachine/eventmachine"
+
 # Active Job.
 group :job do
   gem "resque", require: false
