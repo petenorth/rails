@@ -16,5 +16,6 @@ jobs:
         ruby-version: ${{ matrix.ruby }}
     - name: Build and test with Rake
       run: |
+        sudo apt-get install libncurses5-dev libncursesw5-dev
         bundle install
         bundle exec rake test rails/actionpack/test/journey
