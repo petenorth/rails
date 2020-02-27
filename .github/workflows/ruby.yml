@@ -23,5 +23,5 @@ jobs:
         bundle install
     - name: test actionpack journey
       run: |
-        cd actionpack
+        cd actionpack 
         TEST_DIR=journey bundle exec rake test
