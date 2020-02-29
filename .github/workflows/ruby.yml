@@ -24,4 +24,4 @@ jobs:
     - name: test actionpack journey
       run: |
         cd actionpack 
-        TEST_DIR=journey ruby --experimental-options --vm.XX:+PrintGCSummary --engine.Mode=latency --vm.Xmn1g --vm.Xmx2g -S bundle exec rake test
+        TEST_DIR=journey ruby --experimental-options --engine.Mode=latency -S bundle exec rake test
