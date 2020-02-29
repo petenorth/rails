@@ -21,9 +21,7 @@ jobs:
     - name: install gems
       run: |
         bundle install
-    - name: test json paring error
-      run: bundle exec rake test TEST=rails/rails/actionpack/test/dispatch/request/json_params_parsing_test.rb
     - name: test actionpack journey
       run: |
         cd actionpack 
-        TEST_DIR=journey bundle exec rake test
+        TEST_DIR=journey ruby --experimental-options --vm.XX:+PrintGCSummary --engine.Mode=latency --vm.Xmn1g --vm.Xmx2g -S bundle exec rake test
