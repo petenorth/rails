@@ -17,4 +17,5 @@ jobs:
     - name: Build and test with Rake
       run: |
         bundle install
+        bundle exec rake test test home/runner/work/rails/rails/actionpack/test/dispatch/request/json_params_parsing_test.rb
         bundle exec rake test rails/actionpack/test/journey
