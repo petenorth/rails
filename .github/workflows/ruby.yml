@@ -22,7 +22,7 @@ jobs:
       run: |
         bundle install
     - name: test json paring error
-      run: bundle exec rake test home/runner/work/rails/rails/actionpack/test/dispatch/request/json_params_parsing_test.rb
+      run: bundle exec rake test TEST=rails/rails/actionpack/test/dispatch/request/json_params_parsing_test.rb
     - name: test actionpack journey
       run: |
         cd actionpack 
